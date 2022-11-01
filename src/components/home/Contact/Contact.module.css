@@ -1,0 +1,20 @@
+.contact_section {
+  padding: 0 75px;
+  background: #f6f6f6;
+  border-radius: 20px;
+  justify-content: center;
+  gap: 90px;
+}
+
+.contact_section p {
+  padding: 16px 0 32px 0;
+}
+
+@media screen and (max-width: 429px) {
+  .contact_section {
+    padding: 56px 35px;
+  }
+  .contact_img {
+    display: none;
+  }
+}

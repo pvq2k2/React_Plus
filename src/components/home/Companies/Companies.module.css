@@ -1,0 +1,44 @@
+.companies_section {
+  padding-top: 157px;
+  margin: 0 auto;
+  text-align: center;
+}
+.companies_section span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: #667085;
+}
+
+.logo_container {
+  margin: 16px auto 0 auto;
+  padding: 24px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 115px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+.logo_container img {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 429px) {
+  .companies_section span {
+    font-size: 14px;
+  }
+  .companies_section {
+    padding-top: 120px;
+  }
+  .logo_container {
+    width: 100%;
+    padding: 24px 16px;
+    gap: 29px;
+  }
+  .logo_container img {
+    width: 60px;
+  }
+}

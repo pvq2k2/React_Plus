@@ -1,0 +1,8 @@
+.custome_section {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 429px) {
+  .custome_section {
+    flex-direction: column-reverse;
+  }
+}

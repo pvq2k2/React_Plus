@@ -1,0 +1,17 @@
+.container {
+  width: 1065px;
+  margin: 0 auto;
+}
+
+header .container {
+  margin-top: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 429px) {
+  .container {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
