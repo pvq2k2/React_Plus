@@ -7,14 +7,14 @@ import Hero from '../components/home/Hero'
 import Testimonial from '../components/home/Testimonial'
 import Layout from '../components/layout/client'
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Layout>
         <Hero />
         <Companies />
         <Branding />
         <Custome />
-        <Testimonial />
+        <Testimonial listUser={props.dataUser}/>
         <Contact />
     </Layout>
   )
