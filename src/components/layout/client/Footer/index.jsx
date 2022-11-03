@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { HomeContext } from "../../../../context/HomeProvider";
 import Container from "../../../common/Container";
 import styles from "./Footer.module.css";
 const Footer = () => {
+  const { footerData } = useContext(HomeContext);
   return (
     <footer>
       <Container>
@@ -11,33 +13,19 @@ const Footer = () => {
               <h5>Digital Agency</h5>
               <span>Building digital products, brands &amp; experience</span>
             </div>
-            <div className={`${styles.resources}" ${styles.menu_footer}`}>
-              <h5>Resources</h5>
-              <ul>
-                <li>Guides</li>
-                <li>Blog</li>
-                <li>Cuistomer Stories</li>
-                <li>Glossery</li>
-              </ul>
-            </div>
-            <div className={`${styles.company}" ${styles.menu_footer}`}>
-              <h5>Company</h5>
-              <ul>
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Partners</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div className={`${styles.social_media}" ${styles.menu_footer}`}>
-              <h5>Social Media</h5>
-              <ul>
-                <li>LinkedIn</li>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
+            {footerData.map((data) => (
+              <div
+                key={data.id}
+                className={`${styles.resources}" ${styles.menu_footer}`}
+              >
+                <h5>{data.title}</h5>
+                <ul>
+                  {data.items?.map((data) => (
+                    <li key={data.name}>{data.name}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           <p className={styles.copyright}>
             © Matheus. Todos os direitos reservados
